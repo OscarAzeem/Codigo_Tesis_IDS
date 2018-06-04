@@ -1,0 +1,12 @@
+import pandas as pd
+import numpy as np
+import sys
+from my_classes_02 import Metodos_Thesis as MT
+mc=MT()
+#pd.set_option('display.max_columns', 50)
+dataset_inicio=pd.read_csv("./dataset_labeled/whole_kdd.csv")
+with open("./parametros_iguales_whole_kdd.txt", 'w') as f:
+    sys.stdout = f
+    mc.encuentra_filas_iguales(dataset_inicio,fin='DstHostSrvRerrorRate')
+
+
